@@ -1,0 +1,10 @@
+# Notes 
+
+Question
+- What is dispatcher servlet?
+- Who is configuring dispatcher servlet?
+- What does dispatcher servlet do?
+- How does the HelloWorldBean object get converted to JSON?
+- Who is configuring the error mapping?
+
+By turning on the debugger in application.properties get to know the working
