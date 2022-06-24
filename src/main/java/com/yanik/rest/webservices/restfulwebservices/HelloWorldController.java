@@ -29,6 +29,7 @@ public class HelloWorldController {
 	// hello-world/path-variable/yanik
 	@GetMapping(path="/api/hello-world/path-variable/{name}")
 	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
+//		throw new RuntimeException("Something went wrong"); // to test exceptino in frontend to handle and error testing uncomment this
 		return new HelloWorldBean(String.format("Hello World, %s", name));
 	}
 }
