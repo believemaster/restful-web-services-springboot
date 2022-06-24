@@ -1,4 +1,4 @@
-package com.yanik.rest.webservices.restfulwebservices;
+package com.yanik.rest.webservices.restfulwebservices.helloworld;
 
 public class HelloWorldBean {
 
