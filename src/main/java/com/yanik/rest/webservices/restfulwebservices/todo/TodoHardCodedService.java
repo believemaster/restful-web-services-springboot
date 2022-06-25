@@ -15,9 +15,32 @@ public class TodoHardCodedService {
 		todos.add(new Todo(++idCounter, "Yanik", "Learn To Code", new Date(), false));
 		todos.add(new Todo(++idCounter, "Yanik", "Learn About Microservice", new Date(), false));
 		todos.add(new Todo(++idCounter, "Yanik", "Learn About Devops", new Date(), false));
+		todos.add(new Todo(++idCounter, "Yanik", "Learn About UI/UX", new Date(), false));
 	}
 
 	public List<Todo> findAll() {
 		return todos;
+	}
+	
+	public Todo deleteById(long id) {
+		Todo todo = findById(id);
+		todos.remove(todo);
+		
+		if(todo == null) {
+			return null;
+		}
+		
+		if(todos.remove(todo)) {
+			return todo;
+		}
+	}
+
+	public Todo findById(long id) {
+		for(Todo todo:todos) {
+			if(todo.getId() == id) {
+				return todo;
+			}
+		}
+		return null;
 	}
 }
