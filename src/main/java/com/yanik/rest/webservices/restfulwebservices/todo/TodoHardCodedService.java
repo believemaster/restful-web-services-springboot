@@ -33,6 +33,8 @@ public class TodoHardCodedService {
 		if(todos.remove(todo)) {
 			return todo;
 		}
+		
+		return null;
 	}
 
 	public Todo findById(long id) {
