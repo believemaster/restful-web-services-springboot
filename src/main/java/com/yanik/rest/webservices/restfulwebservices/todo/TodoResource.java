@@ -35,4 +35,10 @@ public class TodoResource {
 		
 		return ResponseEntity.notFound().build();
 	}
+	
+	// GET specific todos
+	@GetMapping(path = "/api/users/{username}/todos/{id}")
+	public Todo getTodo(@PathVariable String username, @PathVariable long id) {
+		return todoService.findById(id);
+	}
 }
